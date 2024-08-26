@@ -1,13 +1,14 @@
-package me.dio.domain.service;
+package me.dio.service;
 
+import me.dio.domain.model.dto.UserDto;
 import me.dio.domain.model.entity.Pet;
 import me.dio.domain.model.entity.User;
 
 import java.util.List;
 
 public interface UserService {
-    User getUserById(Long id);
-    List<User> getAllUser();
-    User saveUser(User user);
+    UserDto getUserById(Long id);
+    List<UserDto> getAllUser();
+    UserDto saveUser(UserDto dto);
     String deleteUser(Long id);
 }
