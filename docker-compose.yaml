@@ -1,0 +1,23 @@
+version: "3.8"
+networks:
+  template-net:
+    driver: bridge
+    name: petlove-net
+  db-postgresql-net:
+    external: true
+
+services:
+  java-api:
+    container_name: "java-api"
+    image: petlove.local:8080/java-api
+    networks:
+      - petlove-net
+      - db-postgresql-net
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - MAVEN_PROFILE=${MAVEN_PROFILE}
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
