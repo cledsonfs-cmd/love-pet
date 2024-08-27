@@ -1,9 +1,8 @@
-<p align="center">
-  <a href="https://www.java.com/pt-BR/" target="blank"><img src="https://upload.wikimedia.org/wikipedia/pt/3/30/Java_programming_language_logo.svg" width="200" alt="Python Logo" /></a>
+<p align="center">  
+  <a href="https://dio.me" target="blank"><img src="https://hermes.digitalinnovation.one/assets/diome/logo-full.svg" width="200" alt="Python Logo" /></a>
 </p>
 
 ## Description
-
 Spring Boot e Angular (17+) 2024 - Jave RESTful API para o Deal
 
 ## Technologies used
@@ -67,13 +66,15 @@ classDiagram
         int idStatus
         string provedor
         string imageUrl        
-        string phone        
+        string phone
+        Role role   
     }
 
 
     Pet "1" *-- "N" Image : contains
     Pet "N" *-- "1" Usuario : belongs to
     UsuarioHistorico "N" *-- "1" Usuario: contains
+    Role "1" *-- "N" Usuario: contains
 ```
 
 ### Compile and Package
