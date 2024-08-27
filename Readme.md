@@ -52,6 +52,13 @@ classDiagram
         string name       
     }
 
+    class UsuarioHistorico {
+        int id
+        string descricao
+        date dataRegistro
+        Usuario usuario
+    }
+
     class Usuario {
         int id
         string email
@@ -60,22 +67,13 @@ classDiagram
         int idStatus
         string provedor
         string imageUrl        
-        string phone
+        string phone        
     }
 
-    class Adopter {
-        int id
-        string name
-        string email
-        string password
-        string image
-        string phone
-        dateTime register
-    }
 
     Pet "1" *-- "N" Image : contains
-    Pet "N" *-- "1" User : belongs to
-    Pet "1" *-- "1" Adopter : belongs to
+    Pet "N" *-- "1" Usuario : belongs to
+    UsuarioHistorico "N" *-- "1" Usuario: contains
 ```
 
 ### Compile and Package
