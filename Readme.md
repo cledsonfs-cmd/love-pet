@@ -49,7 +49,7 @@ classDiagram
     
     class Role {
         int id
-        string name        
+        string name       
     }
 
     class Usuario {
