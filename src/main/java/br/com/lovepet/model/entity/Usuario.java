@@ -28,6 +28,7 @@ public class Usuario {
     private String imageUrl;
     @Column
     private String phone;
+    @Column
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "role_id", referencedColumnName = "id")
